@@ -15,6 +15,6 @@ public class HomeController {
     // Novo endpoint
     @GetMapping("/hello")
     public String helloWorld() {
-        return "Novo endpoint";
+        return "Endpoint final";
     }
 }
