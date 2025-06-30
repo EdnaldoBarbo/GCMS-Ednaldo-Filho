@@ -39,6 +39,6 @@ class WebAppApplicationTests {
 	public void testHelloWorldEndpoint() throws Exception {
 		mockMvc.perform(get("/hello"))
 				.andExpect(status().isOk())
-				.andExpect(content().string("Novo endpoint"));
+				.andExpect(content().string("Novo antigo endpoint"));
 	}
 }
