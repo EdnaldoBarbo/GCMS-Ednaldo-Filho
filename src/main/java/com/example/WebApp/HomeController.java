@@ -12,4 +12,9 @@ public class HomeController {
     public @ResponseBody String greetingednal() {
         return "Hello, Ednaldo!";
     }
+    // Novo endpoint
+    @GetMapping("/hello")
+    public String helloWorld() {
+        return "Novo endpoint";
+    }
 }
