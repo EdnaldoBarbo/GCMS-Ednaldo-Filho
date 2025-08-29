@@ -28,11 +28,11 @@ class WebAppApplicationTests {
 						.string(containsString("Hello, World!")));
 	}
 	@Test
-	public void shouldReturnEdnalMessage() throws Exception { // Nome do método descritivo
+	public void shouldReturnEdnalMessage() throws Exception {
 		this.mockMvc.perform(get("/ednal"))
 				.andDo(print()).andExpect(status().isOk())
 				.andExpect(content()
-						.string(containsString("Hello, Ednaldo")));
+						.string(containsString("Hello, Ednaldo!"))); // <-- Ajuste aqui
 	}
 
 	@Test
