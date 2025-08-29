@@ -32,16 +32,16 @@ class WebAppApplicationTests {
 		this.mockMvc.perform(get("/ednal"))
 				.andDo(print()).andExpect(status().isOk())
 				.andExpect(content()
-						.string(containsString("Hello, Ednaldo!"))); // <-- Ajuste aqui
+						.string(containsString("Hello, Ednaldo!")));
 	}
 
-@Test
-public void testHelloWorldEndpoint() throws Exception {
-    mockMvc.perform(get("/hello"))
-            .andExpect(status().isOk())
-            .andExpect(content().string("Endpoint final"));
-}
-	}
+    @Test
+    public void testHelloWorldEndpoint() throws Exception {
+        mockMvc.perform(get("/hello"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Endpoint final"));
+    }
+	
 	@Test
 	public void testHotfixEndpoint() throws Exception {
 		mockMvc.perform(get("/hotfix"))
