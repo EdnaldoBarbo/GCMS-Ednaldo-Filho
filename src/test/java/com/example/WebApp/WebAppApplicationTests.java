@@ -35,11 +35,12 @@ class WebAppApplicationTests {
 						.string(containsString("Hello, Ednaldo!"))); // <-- Ajuste aqui
 	}
 
-	@Test
-	public void testHelloWorldEndpoint() throws Exception {
-		mockMvc.perform(get("/hello"))
-				.andExpect(status().isOk())
-				.andExpect(content().string("Endpoint final"));
+@Test
+public void testHelloWorldEndpoint() throws Exception {
+    mockMvc.perform(get("/hello"))
+            .andExpect(status().isOk())
+            .andExpect(content().string("Endpoint final"));
+}
 	}
 	@Test
 	public void testHotfixEndpoint() throws Exception {
