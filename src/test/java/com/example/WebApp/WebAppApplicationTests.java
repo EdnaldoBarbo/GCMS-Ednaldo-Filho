@@ -41,4 +41,10 @@ class WebAppApplicationTests {
 				.andExpect(status().isOk())
 				.andExpect(content().string("Endpoint final"));
 	}
+	@Test
+	public void testHotfixEndpoint() throws Exception {
+		mockMvc.perform(get("/hotfix"))
+				.andExpect(status().isOk())
+				.andExpect(content().string("Hotfix aplicado! Versão: 1.0.1"));
+	}
 }
