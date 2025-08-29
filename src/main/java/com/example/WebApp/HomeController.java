@@ -18,12 +18,15 @@ public class HomeController {
     public String helloWorld() {
         return "Endpoint final";
     }
-    //Endpoint hotfix
-    @GetMapping("/hotfix")
-    public String helloWorld() {
+    
+    // Endpoint hotfix - CORRIGIDO
+    @GetMapping("/hotfix-v2") 
+    @ResponseBody
+    public String helloWorldHotfix() { 
         return "Endpoint hotfix";
     }
-    //Endpoint hotfix
+
+    // Outro endpoint hotfix
     @GetMapping("/hotfix")
     @ResponseBody
     public String hotfixEndpoint() {
